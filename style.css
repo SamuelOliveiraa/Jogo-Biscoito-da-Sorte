@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  transition: all 400ms;
+}
+:root {
+  font-size: 62.5%;
+  --ligth-blue: #e4edf1;
+  --ligth-purple: #bb00ff;
+  --dark-purple: #190361;
+  --orange: #ff9500;
+  --white: #fff;
+}
+
+/* BODY */
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    200deg,
+    var(--ligth-purple) 0%,
+    var(--dark-purple) 56%,
+    var(--dark-purple) 100%
+  );
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* CONTAINER */
+.container {
+  background-color: var(--white);
+  box-shadow: 10px 5px 20px black;
+  max-width: 50rem;
+  border-radius: 8px;
+  padding: 5rem 3rem;
+  text-align: center;
+}
+.container h1 {
+  font-size: 2.4rem;
+}
+.container p {
+  font-size: 1.7rem;
+  margin: 2rem 0;
+}
+
+/* IMG-CONTAINER */
+.container .img-container {
+  max-width: 34rem;
+  margin: 3rem auto;
+  cursor: pointer;
+}
+.container .img-container .message {
+  font-family: "Dancing Script", cursive;
+  background-color: var(--ligth-blue);
+  border-radius: 8px;
+  font-size: 2.3rem;
+  padding: 1.3rem;
+  margin: 0 auto;
+}
+.container .img-container img {
+  max-width: 100%;
+}
+.container .img-container:hover img {
+  animation: move 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+}
+.container.luck .img-container:hover img {
+  animation: none;
+}
+.container.luck .img-container .message {
+  animation: naosei 1.3s;
+}
+/* ANIMAÇÃO PARA AS MENSGENS */
+@keyframes naosei {
+  0% {
+    transform: translateY(100px) scale(0.1);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ANIMAÇÃO PARA A IMAGEM DO BISCOITO TREMENDO */
+@keyframes move {
+  10%,
+  90% {
+    transform: translate3d(-2px, -4px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 4px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, -2px, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 4px, 0);
+  }
+}
+
+/* TIRAR DA TELA ELEMENTO BUTTON E MESSAGE */
+.container .img-container .message,
+.container input[type="button"] {
+  display: none;
+}
+
+/* QUANDO O CONTAINER TIVER A CLASSE "LUCK" */
+.container.luck .img-container .message,
+.container.luck input[type="button"] {
+  display: block;
+}
+.container.luck .img-container img {
+  margin-top: 2rem;
+}
+.container.luck input[type="button"] {
+  background-color: var(--orange);
+  padding: 1.5rem 3rem;
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.container.luck p {
+  display: none;
+}
