@@ -43,4 +43,4 @@ cookie.addEventListener("click", () => {
 });
 
 /* RESET WHEN PRESS BUTTON */ 
-button.addEventListener("click", () => resetApp()); 
+button.addEventListener("click", () => resetApp());   
