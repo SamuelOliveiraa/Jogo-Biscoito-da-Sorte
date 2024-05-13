@@ -40,7 +40,7 @@ cookie.addEventListener("click", () => {
     toggleMessage();
     cookie.src = "Assets/opened-cookie.svg";
   }
-});
+});  
 
 /* RESET WHEN PRESS BUTTON */ 
 button.addEventListener("click", () => resetApp());   
