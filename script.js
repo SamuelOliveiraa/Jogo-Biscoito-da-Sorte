@@ -32,7 +32,7 @@ function toggleMessage() {
   randomNumber = Math.round(Math.random() * 10);
   message.innerText = phrases[randomNumber];
 }  
-
+  
 /* WHEN PRESS COOKIE SHOW THE RANDOM PHRASE*/
 cookie.addEventListener("click", () => {
   if (!container.classList.contains("luck")) {
