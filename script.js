@@ -1,8 +1,8 @@
-const cookie = document.querySelector('#cookie')
-let randomNumber = Math.round(Math.random() * 10)
-const container = document.querySelector('.container')
-const button = document.querySelector('#button')
-const message = document.querySelector('.message')
+const cookie = document.querySelector("#cookie");
+let randomNumber = Math.round(Math.random() * 10);
+const container = document.querySelector(".container");
+const button = document.querySelector("#button");
+const message = document.querySelector(".message");
 
 const phrases = [
   "A vida trará coisas boas se tiver paciência.",
@@ -17,30 +17,30 @@ const phrases = [
   "Podemos escolher o que semear, mas somos obrigados a colher o que plantamos.",
   "A sorte favorece a mente bem preparada.",
   "Espere pelo mais sábio dos conselhos: o tempo."
-]
+];
 
 function toggleContainer() {
-  container.classList.toggle('luck')
+  container.classList.toggle("luck");
 }
 
 function resetApp() {
-  cookie.src = 'Assets/fortune-cookie.svg'
-  toggleContainer()
+  cookie.src = "Assets/fortune-cookie.svg";
+  toggleContainer();
 }
 
 function toggleMessage() {
-  randomNumber = Math.round(Math.random() * 10)
-  message.innerText = phrases[randomNumber]
+  randomNumber = Math.round(Math.random() * 10);
+  message.innerText = phrases[randomNumber];
 }
 
 /* WHEN PRESS COOKIE SHOW THE RANDOM PHRASE*/
 cookie.addEventListener('click', () => {
-  if (!container.classList.contains('luck')) {
-    toggleContainer()
-    toggleMessage()
-    cookie.src = 'Assets/opened-cookie.svg'
+  if (!container.classList.contains("luck")) {
+    toggleContainer();
+    toggleMessage();
+    cookie.src = "Assets/opened-cookie.svg";
   }
-})
+});
 
 /* RESET WHEN PRESS BUTTON */
-button.addEventListener('click', () => resetApp())
+button.addEventListener("click", () => resetApp());
