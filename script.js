@@ -34,7 +34,7 @@ function toggleMessage() {
 }
 
 /* WHEN PRESS COOKIE SHOW THE RANDOM PHRASE*/
-cookie.addEventListener('click', () => {
+cookie.addEventListener("click", () => {
   if (!container.classList.contains("luck")) {
     toggleContainer();
     toggleMessage();
