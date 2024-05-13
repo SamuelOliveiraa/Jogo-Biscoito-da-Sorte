@@ -21,7 +21,7 @@ const phrases = [
 
 function toggleContainer() {
   container.classList.toggle("luck");
-}
+}  
 
 function resetApp() {
   cookie.src = "Assets/fortune-cookie.svg";
