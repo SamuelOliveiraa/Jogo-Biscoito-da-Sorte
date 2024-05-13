@@ -24,7 +24,7 @@ function toggleContainer() {
 }  
 
 function resetApp() {
-  cookie.src = "Assets/fortune-cookie.svg";
+  cookie.src = "Assets/fortune-cookie.svg";      
   toggleContainer();
 }
 
